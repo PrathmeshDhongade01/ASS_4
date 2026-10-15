@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="form-card">
+      <div class="heading">
+        <div class="logo" aria-hidden="true">ER</div>
+        <p class="eyebrow">HUMAN RESOURCES</p>
+        <h1>Employee Registration</h1>
+        <p class="subtitle">Enter your details to create an employee profile.</p>
+      </div>
+      <form id="employeeForm" novalidate>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" placeholder="e.g. Aditi Sharma" autocomplete="name" required>
+          <small class="error" id="nameError"></small>
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="name@company.com" autocomplete="email" required>
+          <small class="error" id="emailError"></small>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="At least 8 characters" autocomplete="new-password" required>
+          <small class="hint">Use 8+ characters with at least one letter and one number.</small>
+          <small class="error" id="passwordError"></small>
+        </div>
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel" placeholder="10-digit mobile number" autocomplete="tel" inputmode="numeric" required>
+          <small class="error" id="phoneError"></small>
+        </div>
+        <div class="field">
+          <label for="department">Department</label>
+          <select id="department" name="department" required>
+            <option value="">Select a department</option>
+            <option>Human Resources</option>
+            <option>Engineering</option>
+            <option>Finance</option>
+            <option>Marketing</option>
+            <option>Sales</option>
+            <option>Operations</option>
+            <option>Customer Support</option>
+          </select>
+          <small class="error" id="departmentError"></small>
+        </div>
+        <button type="submit">Register employee <span aria-hidden="true">→</span></button>
+        <p class="form-note">Demo form — details are validated in your browser and are not sent to a server.</p>
+        <div id="successMessage" class="success" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+    <footer>Employee Portal · Registration</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
